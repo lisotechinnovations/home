@@ -1,385 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LISOTECH INNOVATIONS</title>
-<body style="background-image: url('bcg.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-  <!-- your content here -->
-</body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LISOTECH INNOVATIONS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-html{
-    scroll-behavior:smooth;
-}
+    body {
+      background: #020817;
+      color: white;
+      overflow-x: hidden;
+    }
 
-body{
-    background:#020817;
-    color:white;
-    overflow-x:hidden;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-:root{
-    --primary:#0066ff;
-    --card:#0b1220;
-}
+    :root {
+      --primary: #0066ff;
+      --secondary: #0f172a;
+      --card: #0b1220;
+      --text: #e2e8f0;
+      --light: #1e293b;
+    }
 
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:rgba(2,8,23,0.95);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-    border-bottom:1px solid rgba(255,255,255,0.1);
-}
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2, 8, 23, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
 
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-}
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+    }
 
-.logo{
-    font-size:26px;
-    font-weight:700;
-}
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+    }
 
-.logo span{
-    color:var(--primary);
-}
+    .logo span {
+      color: var(--primary);
+    }
 
-/* Navigation */
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
 
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 15px;
+    }
 
-nav ul li a:hover{
-    color:var(--primary);
-}
+    nav ul li a:hover {
+      color: var(--primary);
+    }
 
-/* Hamburger Menu */
-.mobile-menu{
-    display:none;
-    flex-direction:column;
-    gap:5px;
-    cursor:pointer;
-}
+    .btn {
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
 
-.mobile-menu span{
-    width:30px;
-    height:3px;
-    background:white;
-    border-radius:5px;
-}
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,102,255,0.4);
+    }
 
-/* Buttons */
-.btn{
-    display:inline-block;
-    padding:10px 18px;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    transition:.3s;
-}
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 8% 50px;
+      background: linear-gradient(to right, rgba(2,8,23,0.95), rgba(2,8,23,0.8)), url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
 
-.call-btn{
-    background:#0066ff;
-}
+    .hero-content {
+      max-width: 700px;
+    }
 
-.whatsapp{
-    background:#25D366;
-}
+    .hero h1 {
+      font-size: 70px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
 
-.call-btn:hover,
-.whatsapp:hover{
-    transform:translateY(-2px);
-}
+    .hero h1 span {
+      color: var(--primary);
+    }
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    padding:120px 8% 50px;
-    text-align:center;
-    justify-content:center;
-}
+    .hero p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
 
-.hero-content{
-    max-width:700px;
-}
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-.hero h1{
-    font-size:55px;
-    margin-bottom:20px;
-}
+    section {
+      padding: 90px 8%;
+    }
 
-.hero h1 span{
-    color:var(--primary);
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-.hero p{
-    color:#cbd5e1;
-    line-height:1.8;
-}
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
 
-section{
-    padding:80px 8%;
-}
+    .section-title p {
+      color: #94a3b8;
+    }
 
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
 
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
+    .service-card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.3s;
+    }
 
-.service-card{
-    background:var(--card);
-    padding:25px;
-    border-radius:15px;
-    transition:.3s;
-}
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,102,255,0.5);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
 
-.service-card:hover{
-    transform:translateY(-5px);
-}
+    .service-card h3 {
+      margin-bottom: 15px;
+      color: var(--primary);
+      font-size: 20px;
+    }
 
-.service-card h3{
-    margin-bottom:10px;
-    color:#4da3ff;
-}
+    .service-card p {
+      color: #cbd5e1;
+      line-height: 1.7;
+      font-size: 14px;
+    }
 
-.service-card p{
-    color:#cbd5e1;
-    margin-bottom:15px;
-}
+    .booking {
+      background: linear-gradient(to right, #0f172a, #020617);
+      border-radius: 30px;
+    }
 
-.button-group{
-    display:flex;
-    gap:10px;
-}
+    .booking-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
 
-.button-group a{
-    flex:1;
-    text-align:center;
-}
+    .booking-form {
+      background: rgba(255,255,255,0.03);
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+    .booking-form h3 {
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
 
-.contact-card{
-    background:var(--card);
-    padding:25px;
-    border-radius:15px;
-}
+    .input-group {
+      margin-bottom: 20px;
+    }
 
-.contact-card h3{
-    margin-bottom:10px;
-    color:#4da3ff;
-}
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 14px;
+      background: #0f172a;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      color: white;
+      outline: none;
+    }
 
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid rgba(255,255,255,0.1);
-}
+    .payment-boxes {
+      display: grid;
+      gap: 20px;
+    }
 
-/* Mobile */
-@media(max-width:900px){
+    .payment-box {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
 
-nav ul{
-    position:absolute;
-    top:80px;
-    right:-100%;
-    width:250px;
-    background:#020817;
-    flex-direction:column;
-    padding:20px;
-    transition:.4s;
-}
+    .payment-box h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
 
-nav ul.active{
-    right:0;
-}
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
 
-.mobile-menu{
-    display:flex;
-}
+    .contact-card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 20px;
+    }
 
-.hero h1{
-    font-size:40px;
-}
-}
-</style>
+    .contact-card h3 {
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    footer {
+      background: #020617;
+      padding: 40px 8%;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer p {
+      color: #94a3b8;
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    @media(max-width: 900px) {
+      nav ul {
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background: #020817;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+        transition: 0.4s;
+      }
+
+      nav ul.active {
+        left: 0;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+    }
+  </style>
 </head>
 <body>
-<body style="background-image:url('bcg.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;margin:0;height:100vh;">
 
 <header>
-    <div class="navbar">
+  <div class="navbar">
+    <div class="logo">LISOTECH <spam> INNOVATIONS</spam></div>
 
-        <div class="logo">
-            LISOTECH <span>INNOVATIONS</span>
-        </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-        <nav>
-            <ul id="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-        <div class="mobile-menu" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-    </div>
+    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+  </div>
 </header>
 
 <section class="hero" id="home">
-    <div class="hero-content">
-        <h1>Modern Business Solutions <span>For Zambia</span></h1>
-        <p>
-            LISOTECH INNOVATIONS offers professional business registration,
-            compliance services, tax returns, websites, company profiles
-            and online business solutions.
-        </p>
+  <div class="hero-content">
+    <h3>Modern Business Solutions <span>For Zambia</span></h3>
+
+    <h5>
+      LISOTECH INNOVATIONS offers professional business registration,
+      compliance services, tax returns, websites, company profiles,
+      and online business solutions.
+    </h5>
+
+    <div class="hero-buttons">
+      <a href="#services" class="btn">View Services</a>
     </div>
+  </div>
 </section>
 
 <section id="services">
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>Professional registration and compliance solutions</p>
+  </div>
 
-    <div class="section-title">
-        <h2>Our Services</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <h3>Limited Company Registration</h3>
+      <p>Fast and professional company registration services in Zambia.</p>
     </div>
 
-    <div class="services-grid">
-
-        <div class="service-card">
-            <h3>Limited Company Registration</h3>
-            <p>Fast and professional company registration services.</p>
-            <div class="button-group">
-                <a href="tel:+260974101130" class="btn call-btn">Call</a>
-                <a href="https://wa.me/260974101130?text=I%20am%20interested%20in%20Limited%20Company%20Registration" class="btn whatsapp">WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <h3>PACRA Registration</h3>
-            <p>Complete PACRA registration and documentation support.</p>
-            <div class="button-group">
-                <a href="tel:+260974101130" class="btn call-btn">Call</a>
-                <a href="https://wa.me/260974101130?text=I%20am%20interested%20in%20PACRA%20Registration" class="btn whatsapp">WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <h3>ZRA Registration & Returns</h3>
-            <p>TOT and PAYE registration and return filing.</p>
-            <div class="button-group">
-                <a href="tel:+260974101130" class="btn call-btn">Call</a>
-                <a href="https://wa.me/260974101130?text=I%20am%20interested%20in%20ZRA%20Registration" class="btn whatsapp">WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <h3>NAPSA Registration</h3>
-            <p>Professional NAPSA registration and returns services.</p>
-            <div class="button-group">
-                <a href="tel:+260974101130" class="btn call-btn">Call</a>
-                <a href="https://wa.me/260974101130?text=I%20am%20interested%20in%20NAPSA%20Registration" class="btn whatsapp">WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <h3>Business Websites</h3>
-            <p>Modern responsive websites for businesses.</p>
-            <div class="button-group">
-                <a href="tel:+260974101130" class="btn call-btn">Call</a>
-                <a href="https://wa.me/260974101130?text=I%20am%20interested%20in%20Business%20Website%20Development" class="btn whatsapp">WhatsApp</a>
-            </div>
-        </div>
-
-        <div class="service-card">
-            <h3>Company Profiles & Emails</h3>
-            <p>Professional company profiles and email setup.</p>
-            <div class="button-group">
-                <a href="tel:+260974101130" class="btn call-btn">Call</a>
-                <a href="https://wa.me/260974101130?text=I%20am%20interested%20in%20Company%20Profiles%20and%20Emails" class="btn whatsapp">WhatsApp</a>
-            </div>
-        </div>
-
+    <div class="service-card">
+      <h3>PACRA Business Registration</h3>
+      <p>Complete PACRA registration and documentation support.</p>
     </div>
 
+    <div class="service-card">
+      <h3>ZPPA Registration & Renewal</h3>
+      <p>Professional assistance with ZPPA registration and renewals.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>NAPSA Registration & Returns</h3>
+      <p>Secure and reliable NAPSA processing services.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>ZRA Registration & Returns</h3>
+      <p>Support for TOT and PAYE tax returns and registration.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Worker's Compensation</h3>
+      <p>Registration and renewal assistance for worker compliance.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>NHIMA Registration & Returns</h3>
+      <p>Quick and accurate NHIMA compliance solutions.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Company Email & Profiles</h3>
+      <p>Professional branding services for your company identity.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Business Websites</h3>
+      <p>Modern websites with excellent features.</p>
+    </div>
+
+  </div>
 </section>
 
 <section id="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>Reach us anytime for support and inquiries</p>
+  </div>
 
-    <div class="section-title">
-        <h2>Contact Us</h2>
+  <div class="contact-grid">
+
+    <div class="contact-card">
+      <h3>Reach_out</h3>
+      <div class="flex flex-wrap justify-center gap-4 mb-10"><a href="tel:+260974101130" data-template-id="call-button" class="canva-button flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(37, 99, 235); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Call Now</a> <a href="https://wa.me/260974101130?text=Hello%20Lisotech%20Innovations" target="_blank" rel="noopener noreferrer" data-template-id="whatsapp-button" class="canva-button flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(37, 211, 102); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">WhatsApp</a> <a href="mailto:lisotech@yahoo.com" data-template-id="email-button" class="canva-button flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(0, 112, 243); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Email</a>
+    </div>
     </div>
 
-    <div class="contact-grid">
-
-        <div class="contact-card">
-           <div class="flex flex-wrap justify-center gap-4 mb-10"><a href="tel:+260974101130" data-template-id="call-button" class="canva-button flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(37, 99, 235); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Call Now</a> <a href="https://wa.me/260974101130?text=Hello%20Lisotech%20Innovations" target="_blank" rel="noopener noreferrer" data-template-id="whatsapp-button" class="canva-button flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(37, 211, 102); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">WhatsApp</a> <a href="mailto:lisotech@yahoo.com" data-template-id="email-button" class="canva-button flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-transform hover:scale-105" style="background: rgb(0, 112, 243); color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">Email</a>
-    </div>
-        </div>
-
-        <div class="contact-card">
-            <h3>Email</h3>
-            <p>lisotech@yahoo.com</p>
-        </div>
-
-        <div class="contact-card">
-            <h3>Location</h3>
-            <p>Lusaka, Zambia</p>
-        </div>
-
+    <div class="contact-card">
+      <h3>Email Address</h3>
+      <p>lisotech@yahoo.com</p>
     </div>
 
+    <div class="contact-card">
+      <h3>Location</h3>
+      <p>Lusaka,Zambia</p>
+    </div>
+
+  </div>
 </section>
 
 <footer>
-    <p>© 2026 LISOTECH INNOVATIONS. All Rights Reserved.</p>
+  <p>
+    © 2026 LISOTECH INNOVATIONS. All Rights Reserved.
+  </p>
 </footer>
 
 <script>
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
-}
+
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+
+  document.getElementById('bookingForm').addEventListener('submit', function(e){
+    e.preventDefault();
+  });
+
 </script>
 
 </body>
-<body style="background-image:url('bcg.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;margin:0;height:100vh;">
 </html>
